@@ -1,1 +1,5 @@
-# data
+# WRITE dataset
+
+This repository contains the RDF dataset developed within **WenDAng - WRITE digital archive** project.
+
+The dataset connects artworks, their calligraphic or writing-like components, artists, and their contexts, supporting comparison, quantitative analysis, and the identification of recurrent patterns. It forms part of the wider WenDAng semantic infrastructure together with the WRITE ontology and thesaurus. 
