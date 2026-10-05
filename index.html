@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WenDAng Dataset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRITE Dataset</title>
 
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
+      line-height: 1.5;
     }
 
     pre {
-      background: #f5f5f5;
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
       padding: 20px;
       overflow-x: auto;
-      white-space: pre-wrap;
+      white-space: pre;
     }
   </style>
 </head>
@@ -26,19 +29,28 @@
 <h1>WRITE Dataset</h1>
 
 <p>
-  RDF dataset of the WenDAng project, published in Turtle format.
+  RDF dataset developed within WenDAng project
 </p>
 
-<pre><code id="rdf">Loading dataset...</code></pre>
+<p>
+  <a href="writeDataset.ttl">Download / access the Turtle file</a>
+</p>
+
+<pre><code id="dataset">Loading dataset...</code></pre>
 
 <script>
 fetch("writeDataset.ttl")
-  .then(response => response.text())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Could not load dataset");
+    }
+    return response.text();
+  })
   .then(data => {
-    document.getElementById("rdf").textContent = data;
+    document.getElementById("dataset").textContent = data;
   })
   .catch(error => {
-    document.getElementById("rdf").textContent =
+    document.getElementById("dataset").textContent =
       "Unable to load the dataset.";
   });
 </script>
