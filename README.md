@@ -7,7 +7,7 @@ Dataset: `https://w3id.org/write/data/`
 Resources: `https://w3id.org/write/data/item/{id}`
 
 ## Dataset description
-A machine-readable description of the WRITE dataset is provided using **VoID (Vocabulary of Interlinked Datasets)**. It includes information about the dataset scope, access points, URI structure, vocabularies used, licence, provenance, and contributor roles.
+A machine-readable description of the WRITE dataset is provided using **VoID (Vocabulary of Interlinked Datasets)**. It includes information about the dataset scope, access points, URI structure, vocabularies used, licence, provenance, and contributor roles.  
 **https://wendang-project.github.io/data/void.ttl**
 
 ### Contact
