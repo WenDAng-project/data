@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@base <https://wendang-project.github.io/data/void.ttl> .
+@prefix : <#> .
+
+# VoiD description 
+
+<> a void:DatasetDescription ;
+    dcterms:title "VoID description of the WRITE dataset"@en ;
+    dcterms:creator <https://orcid.org/0009-0008-0919-301X> ;
+    foaf:primaryTopic <https://w3id.org/write/data/> .
+
+# WRITE dataset
+
+<https://w3id.org/write/data/>
+    a void:Dataset, prov:Entity ;
+    dcterms:title "WRITE Dataset"@en ;
+    void:dataDump <https://wendang-project.github.io/data/writeDataset.ttl> ;
+    dcterms:description "The WRITE dataset represents contemporary Chinese calligraphy and arts, connecting artworks, their calligraphic or writing-like components, artists, and their broader contexts."@en ;
+    dcterms:creator <https://orcid.org/0009-0008-0919-301X> ; 
+    dcterms:contributor
+        <https://orcid.org/0000-0001-8803-8940>, 
+        <https://orcid.org/0009-0003-5881-0962>, 
+        <https://orcid.org/0000-0002-7017-5936>, 
+        <https://orcid.org/0000-0002-1941-548X> ; 
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:subject
+        "contemporary Chinese calligraphy"@en,
+        "Chinese cultural heritage"@en ;
+    foaf:homepage <https://wendang-project.github.io/data/> ;
+    foaf:page <https://wendang.dipintra.it/en> ; # WenDAng - WRITE Digital Archive website
+    foaf:page <https://writecalligraphyproject.eu/> ; # WRITE project website
+    void:uriSpace "https://w3id.org/write/data/item/" ;
+    void:uriRegexPattern "^https://w3id\\.org/write/data/item/[0-9]+$" ;
+    void:exampleResource
+        <https://w3id.org/write/data/item/142> ;
+    void:sparqlEndpoint
+        <https://fuseki.dipintra.it/wendangSampo/sparql> ;
+    void:vocabulary
+        <https://w3id.org/write/ontology/>,
+        <https://w3id.org/write/thesaurus/>,
+        <http://www.opengis.net/ont/geosparql#>,
+        <http://www.wikidata.org/entity/>,
+        <http://www.wikidata.org/prop/direct/> ,
+        <https://schema.org/> , 
+        <http://www.w3.org/2000/01/rdf-schema#> ;
+    void:triples 23677 ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent <https://orcid.org/0000-0001-8803-8940> ; 
+        prov:hadRole :domainExpert , :dataEntryContributor , :dataCollector , :supervisor
+    ] ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent <https://orcid.org/0009-0008-0919-301X> ; 
+        prov:hadRole :datasetCreator , :dataModelDesigner , :dataManager , :dataCurator 
+    ] ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent <https://orcid.org/0009-0003-5881-0962> ; 
+        prov:hadRole :domainExpert , :dataEntryContributor , :dataCollector
+    ] ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent <https://orcid.org/0000-0002-7017-5936> ; 
+        prov:hadRole :domainExpert , :dataEntryContributor , :dataCollector
+    ] ;
+    prov:qualifiedAttribution [
+        a prov:Attribution ;
+        prov:agent <https://orcid.org/0000-0002-1941-548X> ; 
+        prov:hadRole :domainExpert , :dataEntryContributor , :dataCollector
+    ] .
+
+:datasetCreator
+    a prov:Role ;
+    rdfs:label "Dataset creator"@en ;
+    rdfs:comment "Person responsible for designing the structure of the dataset."@en .
+
+:dataModelDesigner
+    a prov:Role ;
+    rdfs:label "Data model designer"@en ;
+    rdfs:comment "Person responsible for designing the data model used for the dataset."@en .
+
+:dataManager
+    a prov:Role ;
+    rdfs:label "Data manager"@en ;
+    rdfs:comment "Person responsible for managing the dataset and ensuring its quality."@en .
+
+:dataCurator
+    a prov:Role ;       
+    rdfs:label "Data curator"@en ;
+    rdfs:comment "Person responsible for curating the data and ensuring its accuracy."@en .
+
+:domainExpert
+    a prov:Role ;
+    rdfs:label "Domain expert"@en ;
+    rdfs:comment "Person with expertise in the domain of the dataset, providing information, guidance, and validation."@en .
+
+:dataEntryContributor
+    a prov:Role ;
+    rdfs:label "Data entry contributor"@en ;
+    rdfs:comment "Person responsible for entering data into the dataset."@en .
+
+:dataCollector
+    a prov:Role ;
+    rdfs:label "Data collector"@en ;
+    rdfs:comment "Person responsible for collecting data for the dataset."@en . 
+
+:supervisor
+    a prov:Role ;
+    rdfs:label "Supervisor"@en ;
+    rdfs:comment "Person responsible for supervising the project and the dataset creation."@en .
+
+
+<https://orcid.org/0000-0001-8803-8940>
+    a foaf:Person, prov:Agent ;
+    foaf:name "Adriana Iezzi" .
+
+
+<https://orcid.org/0009-0008-0919-301X>
+    a foaf:Person, prov:Agent ;
+    foaf:name "Katarina Lučić" .
+
+
+<https://orcid.org/0009-0003-5881-0962>
+    a foaf:Person, prov:Agent ;
+    foaf:name "Marta R. Bisceglia" .
+
+
+<https://orcid.org/0000-0002-7017-5936>
+    a foaf:Person, prov:Agent ;
+    foaf:name "Martina Merenda" .
+
+
+<https://orcid.org/0000-0002-1941-548X>
+    a foaf:Person, prov:Agent ;
+    foaf:name "Daniele Caccin" .
