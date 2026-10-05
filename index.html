@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WenDAng Dataset</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    pre {
+      background: #f5f5f5;
+      padding: 20px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>WRITE Dataset</h1>
+
+<p>
+  RDF dataset of the WenDAng project, published in Turtle format.
+</p>
+
+<pre><code id="rdf">Loading dataset...</code></pre>
+
+<script>
+fetch("writeDataset.ttl")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("rdf").textContent = data;
+  })
+  .catch(error => {
+    document.getElementById("rdf").textContent =
+      "Unable to load the dataset.";
+  });
+</script>
+
+</body>
+</html>
