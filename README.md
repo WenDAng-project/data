@@ -24,15 +24,15 @@ A machine-readable description of the WRITE dataset is provided using **VoID (Vo
 The WRITE data can be queried using SPARQL. The following example query examines the frequency of different script styles among Chinese-language “Calli-Writing” units.  
 
 ```sparql
-PREFIX ns1: <https://w3id.org/write/ontology#>
-PREFIX ns2: <http://www.wikidata.org/prop/>
+PREFIX write: <https://w3id.org/write/ontology#>
+PREFIX wdt: <http://www.wikidata.org/prop/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?scriptStyle (COUNT(DISTINCT ?unit) AS ?count)
 WHERE {
-    ?unit a ns1:CalliWritingUnit ;
-          ns2:P407 <https://www.wikidata.org/entity/Q7850> ;
-          ns2:P9302 ?style .
+    ?unit a write:CalliWritingUnit ;
+          wdt:P407 <https://www.wikidata.org/entity/Q7850> ;
+          wdt:P9302 ?style .
 
     ?style rdfs:label ?scriptStyle .
 }
