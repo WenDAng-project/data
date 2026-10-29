@@ -47,7 +47,7 @@
         <http://www.wikidata.org/prop/direct/> ,
         <https://schema.org/> , 
         <http://www.w3.org/2000/01/rdf-schema#> ;
-    void:triples 23677 ;
+    void:triples 24223 ;
     prov:qualifiedAttribution [
         a prov:Attribution ;
         prov:agent <https://orcid.org/0000-0001-8803-8940> ; 
